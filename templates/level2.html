@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Level 2: SQL Injection</h2>
+<p>There's a vulnerable profile lookup feature...</p>
+
+<!-- Hint: try modifying the user_id in the URL like /level2?user_id=1 -->
+
+<p><strong>{{ profile }}</strong></p>
+
+{% if flag %}
+<hr>
+<p style="color: lime;">🕵️ Nice injection! Your flag is: <strong>{{ flag }}</strong></p>
+<a href="/level3">Go to Level 3</a>
+{% endif %}
+{% endblock %}

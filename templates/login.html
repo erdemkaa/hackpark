@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Level 1: Login</h2>
+<p>Can you log in?</p>
+
+<!-- Hint: admin uses common passwords -->
+
+<form method="post">
+    <label>Username:</label><br>
+    <input type="text" name="username"><br>
+    <label>Password:</label><br>
+    <input type="password" name="password"><br>
+    <button type="submit">Login</button>
+</form>
+
+{% if message %}
+<p style="color: red;">{{ message }}</p>
+{% endif %}
+
+{% if flag %}
+<hr>
+<p style="color: lime;">🎉 Congrats! Your flag is: <strong>{{ flag }}</strong></p>
+<a href="/level2">Go to Level 2</a>
+{% endif %}
+{% endblock %}

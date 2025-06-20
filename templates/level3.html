@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Level 3: Cookie Trouble</h2>
+
+<p>This page is restricted. You need admin permissions.</p>
+
+<!-- Hint in the HTML -->
+<!-- You might want to check your cookies 👀 -->
+
+{% if access_granted %}
+    <p style="color: lime;">Welcome Admin! 🎉</p>
+    <p>Your flag is: <strong>{{ flag }}</strong></p>
+    <a href="/level4">Go to Level 4</a>
+{% else %}
+    <p style="color: red;">Access Denied. You are not an admin.</p>
+{% endif %}
+
+{% endblock %}
